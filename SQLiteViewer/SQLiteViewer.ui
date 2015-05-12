@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SQLiteViewerClass</class>
+ <widget class="QMainWindow" name="SQLiteViewerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1178</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SQLiteViewer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QListView" name="lstTableNames">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>221</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdShowTable">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>540</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SHOW Table</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tblRecords">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>60</y>
+      <width>901</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="cmdUpdateAll">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>700</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Update All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdCommitAll">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>700</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Commit All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdAddRecord">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Record</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdDeleteRecord">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>0</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Record</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdDeleteAllRecords">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>0</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete All Records</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdUnDeleteRecord">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>30</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>UNDelete Record</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdUnDeleteAllRecords">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>30</y>
+      <width>131</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>UNDelete All Records</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdHideTable">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>570</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HIDE Table</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdUndoRevert">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>700</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Undo Revert</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTableNames">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>53</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TABLES</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDataNames">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>53</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DATA</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1178</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_DB"/>
+    <addaction name="actionClose_DB"/>
+   </widget>
+   <widget class="QMenu" name="menuDemo">
+    <property name="title">
+     <string>Demo</string>
+    </property>
+    <addaction name="actionCreate_DemoDB01"/>
+    <addaction name="actionCreate_DemoDB02"/>
+    <addaction name="actionCreate_DemoDB03"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDemo"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_DB">
+   <property name="text">
+    <string>Open DB</string>
+   </property>
+  </action>
+  <action name="actionClose_DB">
+   <property name="text">
+    <string>Close DB</string>
+   </property>
+  </action>
+  <action name="actionCreate_DemoDB01">
+   <property name="text">
+    <string>Create DemoDB01</string>
+   </property>
+  </action>
+  <action name="actionCreate_DemoDB02">
+   <property name="text">
+    <string>Create DemoDB02</string>
+   </property>
+  </action>
+  <action name="actionCreate_DemoDB03">
+   <property name="text">
+    <string>Create DemoDB03</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="SQLiteViewer.qrc"/>
+ </resources>
+ <connections/>
+</ui>
